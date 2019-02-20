@@ -21,6 +21,29 @@
     background-color: #525252;
 }
 
+/*-----------------------------------------Special/margins/padding/text*/
+
+h1,
+h2,
+h3,
+h4 {
+    margin:0;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.general-sub{
+    font-family: "Exo",sans-serif;
+    font-weight: 300;
+    color:#fafafa;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
 /*-----------------------------------------heading*/
 
 header {
@@ -60,16 +83,16 @@ header {
     color: #fff;
 }
 
-#nav{
+#nav {
     margin: 0;
 }
 
 #nav li {
-    padding:0;
+    padding: 0;
 }
 
-.menuitem{
-    height:120px;
+.menuitem {
+    height: 120px;
     text-align: center;
     padding: 0;
 }
@@ -78,8 +101,8 @@ header {
     width: 100%;
     text-decoration: none;
     color: #fff;
-    height:120px;
-    
+    height: 120px;
+
 }
 
 .menuitem a i {
@@ -103,6 +126,58 @@ header {
 /*-----------------------------------------hover.css*/
 
 .hvr-sweep-to-bottom:before {
-    background: rgba(0,0,0, 0.2);
-    height:120px;
+    background: rgba(0, 0, 0, 0.2);
+    height: 120px;
+}
+
+/*-----------------------------------------footer*/
+
+footer {
+    background-color:#525252;
+    color:#fafafa;
+    min-height:120px;
+    margin:0;
+}
+
+footer .cv-pdf i{
+    color: #fafafa;
+    text-align:center;
+    font-size:18px;
+    padding-left:5px;
+}
+
+footer .cv-pdf i:hover{
+    color: #e84610;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+}
+
+.social-links{
+    padding:0;
+}
+
+.social-links li a i {
+    width:40px;
+    height:40px;
+    padding: 17px 0;
+    border-radius:50%;
+    font-size:20px;
+    line-height:7px;
+    text-align:center;
+    color:#fafafa;
+    background:#8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover{
+    background:#e84610;
+}
+
+#footer-details{
+    margin-top: 20px;
 }
