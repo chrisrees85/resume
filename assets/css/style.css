@@ -342,7 +342,10 @@ footer .cv-pdf i:hover {
 
 .history-heading{
     color:#fafafa;
-    margin-bottom: 50px;
+}
+
+.history-items{
+    margin-bottom: 30px;
 }
 
 /*--------------------------------------------Media Queries*/
