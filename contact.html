@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale-1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_bDcVyIYjWKoIde5ELXouI");
+        })();
+    </script>
 </head>
 
 <body>
@@ -55,7 +61,7 @@
                 <h5 class="uppercase text-center">lets work together!</h5>
             </div>
             <div class="center-form">
-                <form>
+                <form onsubmit="return sendEmail(this);" method="POST">
                     <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
                     <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
                     <textarea name="projectsummary" id="projectsummary" rows="5" class="form-control" placeholder="Project Discription" required></textarea>
@@ -89,6 +95,7 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>
