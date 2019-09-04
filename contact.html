@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale-1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -61,11 +63,29 @@
                 <h5 class="uppercase text-center">lets work together!</h5>
             </div>
             <div class="center-form">
-                <form onsubmit="return sendEmail(this);" method="POST">
+                <form id="request-form" onsubmit="return sendEmail(this);" method="POST">
                     <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
                     <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
                     <textarea name="projectsummary" id="projectsummary" rows="5" class="form-control" placeholder="Project Discription" required></textarea>
-                    <button type="submit" class="btn btn-secondary center-block">Send Request</button>
+                    <button type="submit" class="btn btn-secondary center-block" data-toggle="modal" data-target="#myModal">Send Request</button>
+                    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby=".modal-title" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Thank You</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Your Email has been sent&hellip;</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" onclick="clearFormData();" class="btn btn-default center" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- /.modal -->
                 </form>
             </div>
         </div>

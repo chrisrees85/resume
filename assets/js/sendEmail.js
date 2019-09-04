@@ -1,3 +1,4 @@
+
 function sendEmail(contactForm) {
     emailjs.send("gmail", "chris_resume_request", {
             "from_name": contactForm.name.value,
@@ -12,4 +13,8 @@ function sendEmail(contactForm) {
                 console.log("FAILED", error);
             });
             return false;
+}
+
+function clearFormData() {
+    document.getElementById("request-form").reset();
 }
